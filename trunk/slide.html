@@ -1,0 +1,118 @@
+<script type="text/javascript">
+
+/***********************************************
+* Conveyor belt slideshow script- © Dynamic Drive DHTML code library (www.edutechnology.net)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.edutechnology.net/ for full source code
+***********************************************/
+
+//Specify the slider's width (in pixels)
+var sliderwidth="960px"
+//Specify the slider's height
+var sliderheight="150px"
+//Specify the slider's slide speed (larger is faster 1-10)
+var slidespeed=2
+//configure background color:
+slidebgcolor="#ffffff"
+
+//Specify the slider's images
+var leftrightslide=new Array()
+var finalslide=''
+leftrightslide[0]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://2.bp.blogspot.com/-YvgP9R0WcC8/T3WGKlcI1CI/AAAAAAAAAYw/MBnNW6AiK0E/s400/slide.jpg" border=1></a>'
+leftrightslide[1]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://2.bp.blogspot.com/-mXjbvD6-vMU/T3WG2wAbQoI/AAAAAAAAAY8/8-w8-CHSnwA/s400/goku2.jpg" border=1></a>'
+leftrightslide[2]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://1.bp.blogspot.com/-TQcOhIEoLcE/T3WHDqiraaI/AAAAAAAAAZI/Yr5eUufTMLw/s400/host%2Bjuavascript%2Bfile.png" border=1></a>'
+leftrightslide[3]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://3.bp.blogspot.com/-T3pLxxsC-Cc/T3WHa13EnhI/AAAAAAAAAZU/NUdXZlMvgS0/s400/blogging-tips.jpg" border=1></a>'
+leftrightslide[4]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://3.bp.blogspot.com/-2vqKubvpIy4/T3WHuzAc09I/AAAAAAAAAZg/RL2ik7pH-f8/s400/seo-process6.jpg" border=1></a>'
+leftrightslide[5]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://2.bp.blogspot.com/-9feh5MAFOa8/T3WIKdXxhOI/AAAAAAAAAZs/BdvA10-V29g/s400/flying-fly.gif" border=1></a>'
+leftrightslide[6]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://2.bp.blogspot.com/-tj7GplbsuPc/T3WITzonLCI/AAAAAAAAAZ4/sOfGl5EwMm0/s400/FLASH%252BANIMATED%252BLABEL%252BCLOUD%252BWIDGET.jpg" border=1></a>'
+leftrightslide[7]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://2.bp.blogspot.com/-NGpPQLXrr14/T3WIckaQXcI/AAAAAAAAAaE/EvFnp4UPtDw/s400/blogger.jpg" border=1></a>'
+leftrightslide[8]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://3.bp.blogspot.com/-cUF8VF9ZOJk/T3WIkmqRzZI/AAAAAAAAAaQ/WZAt35kgcS4/s400/ap%2Bpng.gif" border=1></a>'
+leftrightslide[9]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://1.bp.blogspot.com/-Jx5Ke5rBF0o/T3WIxVCgB7I/AAAAAAAAAac/pLEKVPR-72k/s400/donate.png" border=1></a>'
+leftrightslide[10]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://1.bp.blogspot.com/-9B3LfAEJXsk/T3WI7oX7RiI/AAAAAAAAAao/uMSaASHyYIQ/s400/debit-cards.png" border=1></a>'
+leftrightslide[11]='<a href="http://edutechnology.net"><img width=""200" height="150" style="border:1px solid #ddd;" src="http://4.bp.blogspot.com/-RYe-J4XZ6As/T3WJFF7w8_I/AAAAAAAAAa0/3-kwg0mMDEs/s400/blogger%252Bseo.GIF" border=1></a>'
+
+//Specify gap between each image (use HTML):
+var imagegap=" "
+
+//Specify pixels gap between each slideshow rotation (use integer):
+var slideshowgap=5
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var copyspeed=slidespeed
+leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+var actualwidth=''
+var cross_slide, ns_slide
+
+function fillup(){
+if (iedom){
+cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+cross_slide2.style.left=actualwidth+slideshowgap+"px"
+}
+else if (document.layers){
+ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+ns_slide.document.write(leftrightslide)
+ns_slide.document.close()
+actualwidth=ns_slide.document.width
+ns_slide2.left=actualwidth+slideshowgap
+ns_slide2.document.write(leftrightslide)
+ns_slide2.document.close()
+}
+lefttime=setInterval("slideleft()",30)
+}
+window.onload=fillup
+
+function slideleft(){
+if (iedom){
+if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+else
+cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+
+if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+else
+cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+
+}
+else if (document.layers){
+if (ns_slide.left>(actualwidth*(-1)+8))
+ns_slide.left-=copyspeed
+else
+ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+
+if (ns_slide2.left>(actualwidth*(-1)+8))
+ns_slide2.left-=copyspeed
+else
+ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+}
+}
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed">')
+write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+sliderwidth+' height='+sliderheight+' name="ns_slidemenu" bgColor='+slidebgcolor+'>')
+write('<layer name="ns_slidemenu2" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+<a style="font-size:10px; font-weight:bold; color:#3B78CD; text-decoration:underline;" href='http://www.ravisaive.in/' target='_blank'>Ravi Saive</a>
+</script>
