@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title>EPIC GOOGLE - FOR WHEN YOU FEEL EXCESSIVE!!! Known as EpicGoogle.com and TooBigToUse.com!</title>
+	<meta name="description" content="EPIC GOOGLE - FOR WHEN YOU FEEL EXCESSIVE!!!"/>
+	<meta name="keywords" content="epicgoogle, Epic Google, epicgoogle.com, toobigtouse, toobigtouse.com, too big to use" />
+	<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	#google-bar {
+		width: 100%;
+		border-bottom: 1px solid #C9D7F1;
+		font-family: arial,sans-serif;
+	}
+	#google-bar td {
+		font-size: 13px;
+	}
+	#google-bar table {
+		margin-right: 0.5em;
+		margin-left: 0.5em;
+	}
+	#google-bar a {
+		color: #0000CC;
+	}
+	#google-bar #right-bar a {
+		text-align: right;
+	}
+	#google-bar #left-bar a {
+		padding-left: 8px;
+	}
+
+		a img {
+			border: none;
+		}
+		input {
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+
+<div id="google-bar">
+	<table>
+
+		<tbody><tr>
+			<td width="100%" id="left-bar">
+				<nobr><strong>Web</strong>
+					<a class="" href="http://images.google.com/imghp">Images</a>
+					<a class="" href="http://video.google.com/">Videos</a>
+					<a class="" href="http://maps.google.com/maps">Maps</a>
+					<a class="" href="http://news.google.com/nwshp">News</a>
+
+					<a class="" href="http://www.google.com/prdhp">Shopping</a>
+					<a class="" href="http://mail.google.com/mail/">Gmail</a>
+					<a href="http://www.google.com/reader/view/">Reader</a>
+					<a href="http://finance.google.com/">Finance</a>
+					<a href="http://www.youtube.com/">YouTube</a>
+					<a href="http://www.google.com/intl/en/options/">more&#187;</a></nobr>
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+	<p align="center"><a href="http://www.edutechnology.net/"><img alt="EPIC GOOGLE - FOR WHEN YOU FEEL EXCESSIVE!!!" src="http://www.toobigtouse.com/epic-google.png" /></a></p>
+	<p align="center">
+		<form id="search-form" method="get">
+			<table width="100%">
+
+			<tr><td align="center"><input id="search-box" size="55" type="text" name="q" value=""/></td></tr>
+			<tr><td align="center"><input type="submit" value="Epic Search"/><input type="button" value="I'm Feeling EXCESSIVE" onclick="document.location.href = 'http://www.google.com/search?btnI=1&q=' + escape(document.getElementById('search-box').value)"/></td></tr>
+			</table>
+		</form>
+	</p>
+
+<div style="text-align: center; padding-top: 10px;">
+			<br/><br/><br/><br/><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/edutechnologynet" width="180" show_faces="false" stream="false" header="true"></fb:like-box>
+		</div>
+
+	<script>
+		document.getElementById('search-box').focus();
+	</script>
+	<script src="prototype.js"></script>
+	<script>
+		var resizeItAll = function() {
+			var imageDifferential = 1.0015;
+			var fontDifferential = 0.15;
+			var shrinkCondition = parseFloat($('search-box').getStyle('font-size')) < 100;
+			
+			$$('input', '.gsc-tabsArea', '.gsc-resultsbox-visible').each(function(element) {
+				if(!element.getAttribute('addedFont')) { // for IE
+					element.setAttribute('addedFont', parseFloat(element.getStyle('font-size')));
+				}
+				element.setAttribute('addedFont', parseFloat(element.getAttribute('addedFont')) + fontDifferential);
+				
+				if(shrinkCondition) {
+					element.setStyle({
+						'fontSize': (element.getAttribute('addedFont') + 'px')
+					});
+				}
+			});
+			$$('img').each(function(element) {
+				if(!element.getAttribute('addedWidth')) { // for IE
+					element.setAttribute('addedWidth', parseFloat(element.getStyle('width')));
+					element.setAttribute('addedHeight', parseFloat(element.getStyle('height')));
+				}
+				element.setAttribute('addedWidth', parseFloat(element.getAttribute('addedWidth')) * imageDifferential);
+				element.setAttribute('addedHeight', parseFloat(element.getAttribute('addedHeight')) * imageDifferential);
+				if(shrinkCondition) {
+					element.setStyle({
+						'width': element.getAttribute('addedWidth'),
+						'height': element.getAttribute('addedHeight')
+					});
+				}
+			});
+		}
+		new PeriodicalExecuter(resizeItAll, 0.1);
+	</script>
+	<p style="clear: left; font-family: verdana; font-size: 10px;" align="center">Check out my little brother, <a href="http://www.weeniegoogle.com">Weenie Google</a>!</p>
+	<p style="clear: left; font-family: verdana; font-size: 10px;" align="center">Epic Google (<a href="http://www.epicgoogle.com">epicgoogle.com</a> or toobigtouse.com) is not affiliated with Google in anyway. The term &quot;Google&quot; is a registered trademark of <a href="http://www.google.com">Google</a>.</p>
+
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-1268507-8";
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1268507-8");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+	</body>
+</html>
