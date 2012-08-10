@@ -1,0 +1,19 @@
+.post h2 {
+background: url("http://3.bp.blogspot.com/-gLnHp4LoL-Q/T-hYlORTm3I/AAAAAAAAA0s/IN1bvxW-hwg/s1600/h3.png") no-repeat 4px center transparent;
+font-size: 20px;
+font-family: Oswald;
+font-weight:normal;
+padding: 3px 10px 3px 80px;
+color: #0274be;
+border: 3px solid #5bb5f0;
+text-shadow: 0 1px 0 #CCC;
+-moz-border-radius: 60px;
+-webkit-border-radius: 60px;
+border-radius: 60px;
+-moz-box-shadow: 0 1px 3px #5bb5f0, 1px 1px 0 rgba(255, 255, 255, 0.4) inset;
+-webkit-box-shadow: 0 1px 3px #5bb5f0, 1px 1px 0 rgba(255, 255, 255, 0.4) inset;
+box-shadow: 0 1px 3px #5bb5f0, 1px 1px 0 rgba(255, 255, 255, 0.4) inset;
+margin: 15px 3px;
+text-transform: uppercase;
+line-height: 1.3;
+}
