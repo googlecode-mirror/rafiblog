@@ -1,0 +1,119 @@
+<head>
+<style id='page-skin-1' type='text/css'>
+/*-------Form----*/
+input.abt1 {
+color:#FF8E1F;
+font:10px 'trebuchet ms',helvetica,sans-serif;
+background-color:#fff;
+border:1px dotted #0080ff;
+}
+input.abt1hov {
+color:#0080ff;
+font: bold 10px 'trebuchet ms',helvetica,sans-serif;
+border:1px solid;
+}
+textarea {
+width:100%;
+color:#6E818C;
+font:14px 'trebuchet ms',helvetica,sans-serif;
+border:none; }
+/*-------Form2----*/
+input.abt2 {
+color:#000;
+font: bold 14px  'trebuchet ms',helvetica,sans-serif;
+border:1px solid;
+background: #F9780E;
+width:149px;
+height:39px;
+}
+input.abt2hov {
+color:#000;
+font: bold 14px  'trebuchet ms',helvetica,sans-serif;
+border:1px solid;
+background:#F9EAD4;
+width:149px;
+height:39px;
+}
+
+input.abt3 {
+color:#000;
+font: bold 14px  'trebuchet ms',helvetica,sans-serif;
+border:1px solid;
+background:#F9EAD4;
+width:149px;
+height:39px;
+}
+input.abt3hov {
+color:#000000;
+font: bold 14px  'trebuchet ms',helvetica,sans-serif;
+border:1px solid;
+background: #F9780E;
+width:149px;
+height:39px;
+}
+
+--></style>
+
+<script type='text/javascript'>
+
+//<![CDATA[
+
+
+function html2entities(){
+var re=/[<>"'&]/g
+for (i=0; i<arguments.length; i++)
+arguments[i].value=arguments[i].value.replace(re, function(m){return replacechar(m)})
+}
+
+function replacechar(match){
+if (match=="<")
+return "&lt;"
+else if (match==">")
+return "&gt;"
+else if (match=="\"")
+return "&quot;"
+else if (match=="'")
+return "&#039;"
+else if (match=="&")
+return "&amp;"
+}
+//]]>
+</script>
+<script type='text/javascript'>
+
+//<![CDATA[
+
+//Character count script
+function countit(what){
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+
+//]]>
+</script>
+</head>
+<body>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'>
+<div align="center" id='main-wrapper'><font color="#6B828E" size="2" face="Arial, Helvetica, sans-serif"><font color="#000" face="arial"><font><font color="#6B828E">
+</font></font></font></font><form>
+  <p><font color="#6B828E" size="2" face="Arial, Helvetica, sans-serif"></font></p>
+
+  <p>
+
+    <font color="#000;" size="2" face="Arial, Helvetica, sans-serif"><textarea name="data1" style="width: 485px; height: 200px;overflow:hidden; border:1px solid;"></textarea>
+  </font></p>
+  <p align=""><font color="#fff" size="2" face="Arial, Helvetica, sans-serif"><br>
+      <input name="button" type="button" class="abt2" onClick="html2entities(this.form.data1)" onMouseOver="this.className='abt2 abt2hov'" onMouseOut="this.className='abt2'" value="Convert"> 
+      <input onMouseOver="this.className='abt3 abt3hov'" onMouseOut="this.className='abt3'" class="abt3" name="Clear" value="  Clear  " type="reset">
+      <br>
+      <br>
+
+      <br>
+
+  </font>
+  </form>
+</div>
+</div>
+
+</body>
+</html>
